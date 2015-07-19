@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h4 Pick a number 1-10
+  div.messages
+  input(type="text" id="guess")
+  input(type="button" id="guessButton" value="submit" onclick="compareNumber()")
+
+  script(src="/javascripts/test.js")
+
+  
