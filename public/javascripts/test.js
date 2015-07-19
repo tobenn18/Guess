@@ -25,4 +25,4 @@ function compareNumber(){
     
     console.log(randomNumber); 
 };
-<!------>
+<!---->
