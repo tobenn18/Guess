@@ -1,0 +1,16 @@
+Pick a number 1 - 10
+
+- Store the allowed number of guesses in a variable
+- Generate a random number
+- Store that number in a variable
+- Know when a user clicks the button
+- Compare their guess with the generated number
+    - Check to see if it's too high
+        - Tell them it's too high
+        - Subtract a guess
+        - Check to see if their guesses left is 0
+    - Check to see if it's too low
+    - Check to see if it's correct 
+
+<!---->
+
