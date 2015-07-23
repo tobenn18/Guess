@@ -15,3 +15,11 @@ Pick a number 1 - 10
 
 <!----->
 
+- Hook up the button to an event that fires the compare function
+    - EventTarget.addEventListener(eventType, handleFunction, false) ( node == document.getElementById())
+    // jquery $("#id").on("click", function () {})
+- Validation (make sure the value provided a number, make sure the input field not blank)
+    - before running compare function
+- change console.logs to a method that outputs text to the #messages div (so the user can see it on the page easily)
+- update messages to include the number of guesses remaining
+- implementing some basic css
