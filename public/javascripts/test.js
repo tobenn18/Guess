@@ -11,38 +11,48 @@ function isValid() {
        return true;
     };  
 
+function addError(s){
+    $("#message").html(s).addClass("error");
+    $("#message").html(s).removeClass("error");
+};
+
+function addSuccess(s){
+    $("#message").html(s).addClass("success");
+    $("#message").html(s).removeClass("success");
+}
+
 function compareNumbers(){   
     var guess = document.getElementById("guess").value;
-    var text=document.getElementById("message");
+    
     if(guess > randomNumber){
         numberGuesses = numberGuesses - 1;
-        text.innerHTML="Too High!" + "<br>" + "You have " + numberGuesses + " guesses left";
-       text.setAttribute("style", "font-size:24px;color:blue");
+        addError("Too High!" + "<br>" + "You have " + numberGuesses + " guesses left")
+           
         if(numberGuesses < 0){
-            text.innerHTML="You have no more guesses left";
-           text.setAttribute("style", "font-size:36px;color:red");
-            }
+            addError("You have no more guesses left");
+        }
     }
     else if(guess < randomNumber){
-            numberGuesses = numberGuesses - 1;
-            text.innerHTML="Too Low!" + "<br>" + "You have " + numberGuesses + " guesses left";
-          text.setAttribute("style", "font-size:36px;color:green");
+        numberGuesses = numberGuesses - 1;
+        addError("Too Low!" + "<br>" + "You have " + numberGuesses + " guesses left");
+            
         if(numberGuesses > 0){
-            text.innerHTML="You have no more guesses left";
-            text.setAttribute("style", "font-size:36px;color:red");
-            }
+            addError("You have no more guesses left");  
+        }
     }
     else{
-         text.innerHTML="Your guess is correct!!!";
-      text.setAttribute("style", "font-size:58px;color:Purple");
-      }  
+        addSuccess("You guessed Correct!");
+    }  
+     
      console.log(randomNumber);
 };
 
 // add event listener
-var guessButton = document.getElementById("guessButton");
-guessButton.addEventListener("click", function () {
+/*var guessButton = document.getElementById("guessButton");*/
+$("#guessButton").on("click", function () {
   if (isValid()) {
     compareNumbers();
   }
-}, false);
+  
+});
+

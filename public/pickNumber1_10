@@ -23,3 +23,19 @@ Pick a number 1 - 10
 - change console.logs to a method that outputs text to the #messages div (so the user can see it on the page easily)
 - update messages to include the number of guesses remaining
 - implementing some basic css
+
+
+
+------------------------------------
+- Switch from inline styles to using classes
+    - Set up a css file with those classes
+- Begin using jQuery (cdnjs.com)
+- Convert events from plain javascript to jquery event handlers
+- convert innerHTML of messages to jquery html()
+- Create a messageUser function that sets the html/class of the message div
+    - Use addClass/removeClass (or maybe toggleClass) inside of this to set the appropriate class of the message div
+
+
+    What to do next?
+        - convert css to sass
+        - convert guessing game to angular directive

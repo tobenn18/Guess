@@ -2,10 +2,11 @@ extends layout
 
 block content
   h4 Pick a number 1-10
-  div#message
+  div#message.message
   input(type="text" id="guess")
   input(type="button" id="guessButton" value="submit" )
 
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js")
   script(src="/javascripts/test.js")
 
     <!---->
